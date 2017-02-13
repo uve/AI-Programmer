@@ -30,7 +30,7 @@ namespace AIProgrammer
         private static GA _ga = null; // Our genetic algorithm instance.
         private static GAStatus _bestStatus = new GAStatus(); // Holds values for displaying best generation statistics.
         private static DateTime _startTime = DateTime.Now; // Time the program was started.
-        private static string _appendCode = null; // Program code, containing functions, that will be appended to main program code
+        private static string _appendCode = TimesThreeFitness.Functions; // Program code, containing functions, that will be appended to main program code
         private static TargetParams _targetParams = new TargetParams { TargetString = "hi" }; // Used for displaying the target fitness
 
         #endregion
@@ -47,24 +47,25 @@ namespace AIProgrammer
 
         #endregion
 
-        private static IFunction _functionGenerator = null; //new StringFunction(() => GetFitnessMethod(), _bestStatus, fitnessFunction, OnGeneration, _crossoverRate, _mutationRate, _genomeSize, _targetParams); /* Functions require setting BrainfuckVersion=2 in App.config */
+        private static IFunction _functionGenerator = new StringFunction(() => GetFitnessMethod(), _bestStatus, fitnessFunction, OnGeneration, _crossoverRate, _mutationRate, _genomeSize, _targetParams); /* Functions require setting BrainfuckVersion=2 in App.config */
 
         /// <summary>
         /// Selects the type of fitness algorithm to use (Hello World solutions, Calculation solutions, etc).
         /// QUICK START GUIDE:
         /// - Use the desired concrete Fitness class. For example: use StringOptimizedFitness() for a simple "Hello World" type of program.
-        /// 
+        ///
         ///   return new StringOptimizedFitness(_ga, _maxIterationCount, _targetString)
         ///   return new AddFitness(_ga, _maxIterationCount)
         ///   return new SubtractFitness(_ga, _maxIterationCount)
         ///   return new ReverseStringFitness(_ga, _maxIterationCount)
         ///   return new HelloUserFitness(_ga, _maxIterationCount, _targetString)
-        ///   
+        ///
         /// </summary>
         /// <returns>IFitness</returns>
         private static IFitness GetFitnessMethod()
         {
-            return new StringStrictFitness(_ga, _maxIterationCount, _targetParams.TargetString, _appendCode);
+            //return new StringStrictFitness(_ga, _maxIterationCount, _targetParams.TargetString, _appendCode);
+            return new TimesThreeFitness(_ga, _maxIterationCount, 3, _appendCode);
         }
 
         #region Worker Methods
@@ -191,7 +192,7 @@ namespace AIProgrammer
             // Run the result for the user.
             string result = myFitness.RunProgram(program);
             Console.WriteLine(result);
-            
+
             Console.ReadKey();
         }
 
