@@ -66,6 +66,7 @@
     <Compile Include="Concrete\FibonacciFitness.cs" />
     <Compile Include="Concrete\TimesThreeFitness.cs" />
     <Compile Include="Concrete\TimesTwoFitness.cs" />
+    <Compile Include="Concrete\SimpleNumbers.cs" />
     <Compile Include="Concrete\Research\NumberGuessFitness.cs" />
     <Compile Include="Concrete\ReverseStringFitness.cs" />
     <Compile Include="Concrete\HelloUserFitness.cs" />
@@ -95,7 +96,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
