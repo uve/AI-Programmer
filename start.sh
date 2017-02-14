@@ -1,1 +1,1 @@
-nohup mono AI-Programmer/AIProgrammer/bin/Debug/AIProgrammer.exe > logs.txt 2>&1&
+nohup mono AIProgrammer/bin/Debug/AIProgrammer.exe > logs.txt 2>&1&
