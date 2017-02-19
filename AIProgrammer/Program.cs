@@ -65,8 +65,8 @@ namespace AIProgrammer
         private static IFitness GetFitnessMethod()
         {
             //return new StringStrictFitness(_ga, _maxIterationCount, _targetParams.TargetString, _appendCode);
-            return new SimpleNumbers(_ga, _maxIterationCount, 3, TimesThreeFitness.Functions);
-            //return new SimpleNumbers(_ga, _maxIterationCount);
+            //return new SimpleNumbers(_ga, _maxIterationCount, 3, TimesThreeFitness.Functions);
+            return new SimpleNumbers(_ga, _maxIterationCount);
         }
 
         #region Worker Methods
