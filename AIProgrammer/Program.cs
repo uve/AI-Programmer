@@ -66,7 +66,7 @@ namespace AIProgrammer
         {
             //return new StringStrictFitness(_ga, _maxIterationCount, _targetParams.TargetString, _appendCode);
             //return new SimpleNumbers(_ga, _maxIterationCount, 3, TimesThreeFitness.Functions);
-            return  new TimesThreeFitness(_ga, _maxIterationCount, _targetParams.TargetString, 5, _appendCode);
+            return  new TimesThreeFitness(_ga, _maxIterationCount, 3, _appendCode);
         }
 
         #region Worker Methods
