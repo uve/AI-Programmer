@@ -30,7 +30,7 @@ namespace AIProgrammer
         private static GA _ga = null; // Our genetic algorithm instance.
         private static GAStatus _bestStatus = new GAStatus(); // Holds values for displaying best generation statistics.
         private static DateTime _startTime = DateTime.Now; // Time the program was started.
-        private static string _appendCode = PowTwoFitness.Functions; // Program code, containing functions, that will be appended to main program code
+        private static string _appendCode = TimesThreeFitness.Functions; // Program code, containing functions, that will be appended to main program code
         private static TargetParams _targetParams = new TargetParams { TargetString = "hi" }; // Used for displaying the target fitness
 
         #endregion
@@ -65,8 +65,8 @@ namespace AIProgrammer
         private static IFitness GetFitnessMethod()
         {
             //return new StringStrictFitness(_ga, _maxIterationCount, _targetParams.TargetString, _appendCode);
-            //return new SimpleNumbers(_ga, _maxIterationCount, 3, TimesThreeFitness.Functions);
-            return  new PowTwoFitness(_ga, _maxIterationCount, 4, _appendCode);
+            return new TimesThreeFitness(_ga, _maxIterationCount, 4, TimesThreeFitness.Functions);
+            //return  new PowTwoFitness(_ga, _maxIterationCount, 4, _appendCode);
         }
 
         #region Worker Methods
