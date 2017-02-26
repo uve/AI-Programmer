@@ -55,6 +55,7 @@ namespace AIProgrammer.Fitness.Concrete
                     case 2: input1 = 9; break;
                     case 3: input1 = 15; break;
                     case 4: input1 = 20; break;
+                    case 5: input1 = 25; break;
                 };
 
                 try
