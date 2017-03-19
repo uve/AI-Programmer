@@ -19,6 +19,14 @@ namespace AIProgrammer.Fitness.Concrete
 
         private static int[] results = new int[] { 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199  };
 
+        /*
+            12 = 41
+            51 = 239
+            108 = 599
+            141 = 821
+            358 = 2417
+            470 = 3343
+         */
         /// <summary>
         /// Previously generated BrainPlus function for addition (a) and times two (b). Generated using AddFitness and TimesTwoFitness. Replaced first . with $ and trimmed remaining instructions.
         /// To use, set _appendCode = SimpleNumbers.Functions in main program.
@@ -50,12 +58,12 @@ namespace AIProgrammer.Fitness.Concrete
             {
                 switch (i)
                 {
-                    case 0: input1 = 3; break;
-                    case 1: input1 = 5; break;
-                    case 2: input1 = 9; break;
-                    case 3: input1 = 15; break;
-                    case 4: input1 = 20; break;
-                    case 5: input1 = 25; break;
+                    case 0: input1 = 12; break;
+                    case 1: input1 = 23; break;
+                    case 2: input1 = 31; break;
+                    case 3: input1 = 39; break;
+                    case 4: input1 = 45; break;
+                    case 5: input1 = 50; break;
                 };
 
                 try
