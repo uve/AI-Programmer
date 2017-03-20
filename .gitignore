@@ -8,5 +8,6 @@
 !README.txt
 !lib/*.dll
 *.xml
+AIProgrammer/bin/
 Debug/
 Release/

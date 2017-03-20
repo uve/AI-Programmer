@@ -52,7 +52,7 @@ namespace AIProgrammer.Fitness.Concrete
                     case 1: input1 = 3; break;
                     case 2: input1 = 4; break;
                     case 3: input1 = 5; break;
-                    case 4: input1 = 50; break;
+                    case 4: input1 = 8; break;
                 };
 
                 try

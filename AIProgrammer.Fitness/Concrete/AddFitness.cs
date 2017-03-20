@@ -39,12 +39,12 @@ namespace AIProgrammer.Fitness.Concrete
             {
                 switch (i)
                 {
-                    case 0: input1 = 1; input2 = 2; break;
-                    case 1: input1 = 3; input2 = 4; break;
-                    case 2: input1 = 5; input2 = 1; break;
-                    case 3: input1 = 6; input2 = 2; break;
-                    case 4: input1 = 3; input2 = 6; break;
-                    case 5: input1 = 2; input2 = 0; break;
+                    case 0: input1 = 8; input2 = 2; break;
+                    case 1: input1 = 9; input2 = 4; break;
+                    case 2: input1 = 15; input2 = 1; break;
+                    case 3: input1 = 26; input2 = 2; break;
+                    case 4: input1 = 33; input2 = 6; break;
+                    case 5: input1 = 42; input2 = 0; break;
                 };
 
                 try
@@ -89,7 +89,7 @@ namespace AIProgrammer.Fitness.Concrete
                     int value;
                     if (Int32.TryParse(_console.ToString(), out value))
                     {
-                        Fitness += 256 - Math.Abs(value - (input1 + input2));
+                        Fitness += 256 - Math.Abs(value - (input1 - input2));
                     }
                 }
 
