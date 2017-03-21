@@ -89,7 +89,7 @@ namespace AIProgrammer.Fitness.Concrete
                     int value;
                     if (Int32.TryParse(_console.ToString(), out value))
                     {
-                        Fitness += 256 - Math.Abs(value - (input1 - input2));
+                        Fitness += 256 - Math.Abs(value - (input1 * input2));
                     }
                 }
 
